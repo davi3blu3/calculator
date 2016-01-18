@@ -1,0 +1,73 @@
+
+/* IMPORT FONT */
+@font-face {
+    font-family: digital;
+    src: url('../fonts/digital-7-ital.ttf');
+}
+
+body {
+	text-align: center;
+}
+
+.container {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.screen {
+	width: 360px;
+	height: 60px;
+	background-color: #000;
+	position: relative;
+	display: block;
+	padding-top: 20px;
+	overflow: hidden;
+}
+
+.housing {
+	width: 360px;
+	height: 340px;
+	background-color: #34373c;
+	position: relative;
+	padding-top: 20px;
+	display: block;
+}
+
+.display {
+	width: 312px;
+	height: 50px;
+	margin: 0 auto;
+	color: #1bfffb;
+	font-family: digital;
+	font-size: 3.2em;
+	font-weight: bold;
+	text-align: right;
+	vertical-align: middle;
+}
+
+.row {
+	width: 100%;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+
+button {
+	width: 75px;
+	height: 50px;
+	border-radius: 8px;
+	font-weight: bold;
+	font-size: 1.6em;
+}
+
+.orange {
+	background-color: #ff7e23;
+	color: white;
+}
+
+.equal {
+	height: 110px;
+	float: right;
+	position: relative;
+	left: -22px;
+}
