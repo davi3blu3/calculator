@@ -19,7 +19,7 @@ $(document).ready(function() {
 	// INTEGER BUTTON - ON CLICK FUNCTION
 	$(".integer").on("click", function() {
 		operand.push($(this).text());
-		$(".display").text(operand.join(""));	// show current operand input in DOM
+		$(".display").text(operand.join("").substring(0, 10));	// show current operand input in DOM
 	});
 
 
@@ -33,7 +33,7 @@ $(document).ready(function() {
 					equation.push($(this).text());			// push operator to equation array
 				}
 			} else {									// CONDITION - equation empty, operand has input
-				equation.push(Number(operand.join("")));	// push operand to equation array
+				equation.push(Number(operand.join("").substring(0, 10)));	// push operand to equation array
 				operand = [];								// clear operand
 				equation.push($(this).text());				// push operator to equation array
 			}
@@ -42,14 +42,13 @@ $(document).ready(function() {
 				equation[1] = $(this).text();				// replace equation operator with new
 
 			} else {									// CONDITION - equation has input, operand has input
-				equation.push(Number(operand.join("")));	// push operand to equation array
+				equation.push(Number(operand.join("").substring(0, 10)));	// push operand to equation array
 				operand = [];								// clear operand
 				calculate(equation);						// solve current equation
 				equation.push(answer);
 				equation.push($(this).text());				// push operator to equation array
 			}
 		}
-		console.log(equation);
 	});
 
 
@@ -69,7 +68,7 @@ $(document).ready(function() {
 				equation.push(0);							// push zero to equation array
 				calculate(equation);						// solve current equation
 			} else {									// CONDITION - equation has input, operand has input
-				equation.push(Number(operand.join("")));	// push operand to equation array
+				equation.push(Number(operand.join("").substring(0, 10)));	// push operand to equation array
 				operand = [];								// clear operand
 				calculate(equation);						// solve current equation
 			}
@@ -98,7 +97,6 @@ $(document).ready(function() {
 			if (equation.length === 0 && answer != undefined) {
 				operand.push(answer);
 				if (operand[0] != "-") {
-					console.log("answer not negative");
 					operand.unshift("-");
 				} else {
 					operand.shift();
