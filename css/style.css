@@ -27,7 +27,7 @@ body {
 .housing {
 	width: 360px;
 	height: 340px;
-	background-color: #34373c;
+	background-color: #14471c;
 	position: relative;
 	padding-top: 20px;
 	display: block;
@@ -37,7 +37,7 @@ body {
 	width: 312px;
 	height: 50px;
 	margin: 0 auto;
-	color: #1bfffb;
+	color: #00dfdb;
 	font-family: digital;
 	font-size: 3.2em;
 	font-weight: bold;
@@ -61,7 +61,7 @@ button {
 }
 
 .orange {
-	background-color: #ff7e23;
+	background-color: #c45e03;
 	color: white;
 }
 
